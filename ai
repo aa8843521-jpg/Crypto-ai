@@ -1,0 +1,7 @@
+exchange = ccxt.binance({'enableRateLimit': True})
+df = fetch_data(exchange, 'BTC/USDT')
+signals = clean_signal_analysis(df)
+
+for sig in signals:
+    # Pass to your RiskEngine & Executor (identical structure)
+    print(sig)
